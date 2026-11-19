@@ -3,57 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title> 
+    <title>The Reading Nook</title> 
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <script type="module" src="js/bootstrap.bundle.min.js"></script>
 
 </head>
 <body>
-    <nav class="navbar md:navbar-expand bg-1">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" aria-hidden="true"></span>
-    </button>
-    <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
-      <div class="drawer-header">
-        <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  <nav class="navbar md:navbar-expand bg-1">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">The Reading Nook</a>
+      <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 md:mb-0">
+          <ul class="nav navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          </div>
+      </dialog>
+    </div>
+  </nav>
+
+<main class="container">
+  <h1 class="mt-4">The Reading Nook</h1>
+
+  <div id="carouselStackedBottom" class="carousel slide">
+    <div class="carousel-inner rounded-5">
+      <div class="carousel-item active bg-dark">
+        <img src="images/normal-people.jpg" class="d-block w-100 object-fit-contain" alt="a green and blue book cover featuring two lined faces" style="height: 500px;">
       </div>
-      <div class="drawer-body mb-2 md:mb-0">
-        <ul class="nav navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
-              Menu
-            </button>
-            <div class="menu">
-              <a class="menu-item" href="#">Action</a>
-              <a class="menu-item" href="#">Another action</a>
-              <hr class="menu-divider">
-              <a class="menu-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="hstack gap-2" role="search">
-          <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
-          <button class="btn-solid btn-icon theme-secondary" type="submit">
-            <svg class="bi" width="16" height="16"><use href="#search" /></svg>
-          </button>
-        </form>
+      <div class="carousel-item bg-dark">
+        <img src="images/tgcf.jpg" class="d-block w-100 object-fit-contain" alt="a red book cover with two characters holding hands with an umbrella above them" style="height: 500px;">
       </div>
-    </dialog>
+      <div class="carousel-item bg-dark">
+        <img src="images/no-longer-human.jpg" class="d-block w-100 object-fit-contain" alt="a pink book cover with a blob-like silhouette of a person" style="height: 500px;">
+      </div>
+    </div>
+    <div>
+      <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselStackedBottom" data-bs-slide="prev">
+        <span class="carousel-icon-prev" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselStackedBottom" data-bs-slide="next">
+        <span class="carousel-icon-next" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </div>
-</nav>
+
+  <h2 class="mt-5 mb-4">More Books to Love...</h2>
+
+  <div class="row g-4">
+      <div class="col-12 md:col-6 lg:col-4">
+        <article class="card h-100">
+          <img src="..." class="card-img-top" alt="..." width="600" height="400">
+          <div class="card-body">
+            <h3 class="card-title">...</h3>
+            <p class="card-text">...</p>
+            <div class="accordion">
+              <details class="accordion-item" name="accordion-beds">
+                <summary class="accordion-header">
+                  What Genres?
+                  <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-body">
+                  ...
+                </div>
+              </details>
+            </div>
+            <div>
+              <button type="button" class="btn-solid theme-primary" data-bs-toggle="dialog" data-bs-target="#dialog-beds">
+                ... 
+              </button>
+            </div>
+            <dialog class="dialog" id="dialog-beds" aria-labelledby="dialog-beds-title">
+              <div class="dialog-header">
+                <h3 class="dialog-title" id="dialog-beds-title">...</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+              </div>
+              <div class="dialog-body">
+                <p>...</p>
+              </div>
+              <div class="dialog-footer">
+                <button type="button" class="btn-solid theme-secondary" data-bs-dismiss="dialog">Close</button>
+              </div>
+            </dialog>
+          </div>
+        </article>
+      </div>
+      
+</main>
+
+  <footer class="container py-4 mt-5 border-top">
+    <p class="fg-2 mb-0">&copy; 2026 The Reading Nook.</p>
+  </footer>
 </body>
 
 </html>
